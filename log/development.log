@@ -1,0 +1,27 @@
+Started GET "/" for 127.0.0.1 at 2023-01-10 18:37:49 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 0.9ms | Allocations: 558)
+  Rendered layout layouts/application.html.erb (Duration: 199.8ms | Allocations: 97151)
+Completed 200 OK in 206ms (Views: 202.9ms | ActiveRecord: 0.0ms | Allocations: 102854)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-10 18:37:51 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2696)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3061)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-10 18:37:51 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2489)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
