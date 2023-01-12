@@ -25,3 +25,21 @@ Processing by UsersController#first as HTML
 Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 2798)
 
 
+Started GET "/" for 127.0.0.1 at 2023-01-12 12:43:34 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 1.3ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 170.0ms | Allocations: 98648)
+Completed 200 OK in 179ms (Views: 173.7ms | ActiveRecord: 0.0ms | Allocations: 104358)
+
+
+Started GET "/second" for 127.0.0.1 at 2023-01-12 12:43:37 +0530
+Processing by UsersController#second as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/second.html.erb within layouts/application
+  Rendered users/second.html.erb within layouts/application (Duration: 0.3ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2816)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3183)
+
+
