@@ -25,3 +25,30 @@ Processing by UsersController#first as HTML
 Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 2798)
 
 
+Started GET "/" for 127.0.0.1 at 2023-01-12 12:07:34 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 1.0ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 35951)
+Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 40774)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-12 12:07:36 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2587)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2952)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-12 12:07:36 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered users/first.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2487)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2795)
+
+
