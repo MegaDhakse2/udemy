@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+ h1, small{
+	padding-left: 2%;
+	line-height: 20px;
+ }
+ .form-head{
+	padding: 2%;
+	color: blueviolet;
+}
+
+ .header{
+	background-color: aqua;
+	width: 100%;
+	padding-top: 3%;
+
+ }
+footer{
+	padding: 3%;
+	text-align: center;
+	vertical-align: end;
+	background-color: darkslategray;
+	color: antiquewhite;
+	margin-top: 70%;
+
+}
+.nav-links{
+	color:antiquewhite;
+	text-decoration: none;
+
+}
+.nav-bot{
+	word-spacing: 40px;
+
+}
+.align-items-center{
+	padding: 5%;
+	padding-left: 30%;
+	width: 70%;
+	align-items: center;
+}
+

@@ -1,0 +1,35 @@
+<% if flash[:success] %>
+	<div class="alert alert-info" role="alert">
+    <%= flash[:success]%>
+</div>
+<% end %>
+
+<% if flash[:empty] %>
+	<div class="alert alert-warning" role="alert">
+    <%= flash[:empty]%>
+</div>
+<% end %>
+
+<% if flash[:email] %>
+	<div class="alert alert-warning" role="alert">
+    <%= flash[:email]%>
+</div>
+<% end %>
+
+<% if flash[:pass] %>
+	<div class="alert alert-warning" role="alert">
+    <%= flash[:pass]%>
+</div>
+<% end %>
+
+<% if flash[:samepass] %>
+	<div class="alert alert-warning" role="alert">
+    <%= flash[:samepass]%>
+</div>
+<% end %>
+
+<% if flash[:error] %>
+	<div class="alert alert-warning" role="alert">
+    <%= flash[:error]%>
+</div>
+<% end %>
