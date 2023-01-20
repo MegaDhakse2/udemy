@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = Datum.new(user_params)
     if @user.save
       flash[:success] = "Account succcessfully created"
-      redirect_to root_path
+      redirect_to users_path
       # elsif @user.firstName # ||
       #   # @user.email == nil || @user.password == nil
       #   flash[:empty] = "please fill the empty fields.."
@@ -31,6 +31,25 @@ class UsersController < ApplicationController
       # render :new
       redirect_to signup_path
     end
+  end
+  def show
+    @user = Datum.find(params[:id])
+  end
+  def edit
+    @user = Datum.find(params[:id])
+  end
+  def update
+    @user = Datum.find(params[:id])
+    if @user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+  def destroy
+    @user = Datum.find(params[:id])
+    @user.destroy
+    redirect_to users_path
   end
 
   private

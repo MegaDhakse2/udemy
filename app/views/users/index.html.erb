@@ -1,4 +1,72 @@
 
-<% @user.each do |thing| %>
-	<h1><%=thing.firstName%></h1>
+<center>Articles</center>
+
+	<% @user.each do |article| %>
+	<div class="container" id="card">
+		<div class="row justify-content-md-center">
+		<div class="col-8 mt-4">
+	    <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+
+	     <div class="card-header">
+		<p>Article <%=article.id%></p>
+	    </div>
+
+	  <div class="card-body">
+		<h5 class="card-title"><%=article.firstName%></h5>
+		<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			<p class="btn btn-outline-success" ><%= link_to 'show', user_path(article) %></p>
+			<p class="btn btn-outline-info"> <%= link_to 'Edit', edit_user_path(article) %></p>
+			<p class="btn btn-outline-danger"><%= link_to 'delete', user_path(article), data:{
+				turbo_method: :delete,
+				turbo_confirm: "Are you sure?"
+			} %></p>
+
+
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<%end%>
+
+
+<div class="all">
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th colspan="3"scope="col" >Handle</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+<% @user.each do |article| %>
+
+      <th scope="row"><%= article.id%></th>
+      <td><%= article.firstName%></td>
+      <td><%= article.email%></td>
+	  <td><%= link_to 'show', user_path(article) %>
+          <%= link_to 'Edit', edit_user_path(article) %>
+		  <%= link_to 'delete', user_path(article), data:{
+			 turbo_method: :delete,
+			turbo_confirm: "Are you sure?"
+		  } %>
+
+     </td>
+
+    </tr>
 <% end %>
+
+	 </tbody>
+</table>
+<%= link_to "New ", new_user_path %>
+
+</div>
+
+
+
+</div>

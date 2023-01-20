@@ -1,0 +1,13 @@
+
+<strong>Name:</strong><%= @user.firstName%> <br>
+<strong>lastNme:</strong><%= @user.lastName%><br>
+<strong>Email:</strong><%= @user.email%><br>
+
+&nbsp&nbsp
+<%= link_to 'Edit', edit_user_path %>
+&nbsp &nbsp &nbsp
+<%= link_to "Destroy", user_path(@user.id), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+

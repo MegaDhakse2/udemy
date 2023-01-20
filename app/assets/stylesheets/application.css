@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  h1, small{
 	padding-left: 2%;
 	line-height: 20px;
@@ -24,6 +25,7 @@
 
  .header{
 	background-color: aqua;
+	/* background-image: url(home.png); */
 	width: 100%;
 	padding-top: 3%;
 
@@ -34,13 +36,30 @@ footer{
 	vertical-align: end;
 	background-color: darkslategray;
 	color: antiquewhite;
-	margin-top: 70%;
-
+	margin-top: 20%;
+}
+.container-fluid{
+	background-color: rgb(175, 189, 216);
+	padding: 4px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-bottom:dotted 2px ;
 }
 .nav-links{
 	color:antiquewhite;
 	text-decoration: none;
+}
 
+ #navbarDropdown{
+	color:rgb(12, 7, 1);
+	text-decoration: none;
+ }
+
+.nav-links:hover{
+	color: chartreuse;
 }
 .nav-bot{
 	word-spacing: 40px;
@@ -53,3 +72,39 @@ footer{
 	align-items: center;
 }
 
+.jumbotron{
+	background-image: url(lapback.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: antiquewhite;
+	/* border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px; */
+	padding: 10%;
+	text-align: right;
+}
+.lead{
+	font-weight: 300;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all{
+	background-color: lightgrey;
+}
+#card{
+	background-color: darkcyan;
+}
+
+#btn{
+	text-decoration: none;
+}
+center{
+	color: rgb(37, 126, 210);
+	font-size: 50px;
+	font-weight: 400;
+	font-family: monospace;
+	font-style: italic;
+}
