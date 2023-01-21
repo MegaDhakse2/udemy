@@ -1,4 +1,5 @@
 class Datum < ApplicationRecord
+  belongs_to :user #, class_name: "user #", foreign_key: "user #_id"
   PASSWORD_FORMAT =
     /\A
   (?=.{8,})          # Must contain 8 or more characters

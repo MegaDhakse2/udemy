@@ -900,3 +900,1055 @@ Migrating to AddColumnToDatum (20230120141020)
 Migrating to AddColumnToDatum (20230120141020)
   [1m[36mActiveRecord::SchemaMigration Pluck (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToDatum (20230120141020)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnPasswordToUsers (20230121062648)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "password" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230121062648"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" = ? LIMIT ?[0m  [["email", "kjkj"], ["LIMIT", 1]]
+  [1m[36mDatum Create (0.1ms)[0m  [1m[32mINSERT INTO "data" ("firstName", "lastName", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstName", "kljk"], ["lastName", "lkj"], ["email", "kjkj"], ["created_at", "2023-01-21 06:31:44.315011"], ["updated_at", "2023-01-21 06:31:44.315011"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnUserIdToDatum (20230121063243)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "data" ADD "user_id" int[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230121063243"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" = ? LIMIT ?[0m  [["email", "iii"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" = ? LIMIT ?[0m  [["email", "kjkjjj"], ["LIMIT", 1]]
+  [1m[36mDatum Create (0.1ms)[0m  [1m[32mINSERT INTO "data" ("firstName", "lastName", "email", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "kkk"], ["lastName", "ii"], ["email", "kjkjjj"], ["created_at", "2023-01-21 06:50:04.896211"], ["updated_at", "2023-01-21 06:50:04.896211"], ["user_id", 1]]
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2023-01-21 13:01:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 320)
+  Rendered shared/_jumbotron.html.erb (Duration: 0.3ms | Allocations: 147)
+  Rendered users/first.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1284)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 500)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 40241)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 45060)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-21 13:01:50 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered shared/_jumbotron.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered users/first.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 43)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3234)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3598)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-21 13:01:51 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_jumbotron.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered users/first.html.erb within layouts/application (Duration: 0.2ms | Allocations: 132)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3111)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 3420)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 13:01:52 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4269)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 7185)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 11944)
+
+
+Started GET "/users/home.png" for 127.0.0.1 at 2023-01-21 13:01:52 +0530
+Started GET "/users/login.png" for 127.0.0.1 at 2023-01-21 13:01:52 +0530
+Started GET "/users/admin.png" for 127.0.0.1 at 2023-01-21 13:01:52 +0530
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"home"}
+Started GET "/users/signup.png" for 127.0.0.1 at 2023-01-21 13:01:52 +0530
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 3506)
+
+
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"login"}
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=home):
+  
+app/controllers/users_controller.rb:37:in `show'
+Started GET "/users/contactus.png" for 127.0.0.1 at 2023-01-21 13:01:52 +0530
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 62ms (ActiveRecord: 0.2ms | Allocations: 54806)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=login):
+  
+app/controllers/users_controller.rb:37:in `show'
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"admin"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 6638)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=admin):
+  
+app/controllers/users_controller.rb:37:in `show'
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"contactus"}
+  [1m[36mDatum Load (0.0ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.2ms | Allocations: 11783)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=contactus):
+  
+app/controllers/users_controller.rb:37:in `show'
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"signup"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 3770)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=signup):
+  
+app/controllers/users_controller.rb:37:in `show'
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 13:02:01 +0530
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "datum"=>{"firstName"=>"fdfdfd", "lastName"=>"fdfdf", "email"=>"fdfdfdfdf"}, "commit"=>"Sign up "}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" ORDER BY "data"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" = ? LIMIT ?[0m  [["email", "fdfdfdfdf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mDatum Create (0.2ms)[0m  [1m[32mINSERT INTO "data" ("firstName", "lastName", "email", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "fdfdfd"], ["lastName", "fdfdf"], ["email", "fdfdfdfdf"], ["created_at", "2023-01-21 07:32:01.903515"], ["updated_at", "2023-01-21 07:32:01.903515"], ["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 27ms (ActiveRecord: 10.0ms | Allocations: 28059)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-01-21 13:02:01 +0530
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3232)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 6474)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 6966)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-01-21 13:03:57 +0530
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5896)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 5973)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 7023)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User id: 1, first: "meg", last: "jjj", created_at: "2023-01-20 13:56:14.203040000 +0000", updated_at: "2023-01-20 13:56:14.203040000 +0000", password: nil>):
+     8: 	    <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+     9: 
+    10: 	     <div class="card-header">
+    11: 		<p>Article <%=article.user.username if article.user%></p>
+    12: 	    </div>
+    13: 
+    14: 	  <div class="card-body">
+  
+app/views/users/index.html.erb:11
+app/views/users/index.html.erb:4
+Started GET "/users" for 127.0.0.1 at 2023-01-21 13:04:29 +0530
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2678)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2755)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 3814)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     8: 	    <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+     9: 
+    10: 	     <div class="card-header">
+    11: 		<p>Article <%=article.user.username %></p>
+    12: 	    </div>
+    13: 
+    14: 	  <div class="card-body">
+  
+app/views/users/index.html.erb:11
+app/views/users/index.html.erb:4
+Started GET "/users" for 127.0.0.1 at 2023-01-21 13:04:30 +0530
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2043)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2351)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     8: 	    <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+     9: 
+    10: 	     <div class="card-header">
+    11: 		<p>Article <%=article.user.username %></p>
+    12: 	    </div>
+    13: 
+    14: 	  <div class="card-body">
+  
+app/views/users/index.html.erb:11
+app/views/users/index.html.erb:4
+Started GET "/users" for 127.0.0.1 at 2023-01-21 13:04:30 +0530
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1970)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2041)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2328)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     8: 	    <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+     9: 
+    10: 	     <div class="card-header">
+    11: 		<p>Article <%=article.user.username %></p>
+    12: 	    </div>
+    13: 
+    14: 	  <div class="card-body">
+  
+app/views/users/index.html.erb:11
+app/views/users/index.html.erb:4
+Started GET "/users" for 127.0.0.1 at 2023-01-21 13:04:45 +0530
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 3268)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 486)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 7511)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 8589)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-21 14:28:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 320)
+  Rendered shared/_jumbotron.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered users/first.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1284)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 500)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 39996)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 44815)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-21 14:28:53 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered shared/_jumbotron.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered users/first.html.erb within layouts/application (Duration: 0.2ms | Allocations: 139)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 43)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3203)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3567)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-21 14:28:53 +0530
+Processing by UsersController#first as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/first.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_jumbotron.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered users/first.html.erb within layouts/application (Duration: 0.2ms | Allocations: 132)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3110)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 3418)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:00 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4261)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 47)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 7177)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 11938)
+
+
+Started GET "/users/home.png" for 127.0.0.1 at 2023-01-21 14:29:00 +0530
+Processing by UsersController#show as PNG
+  Parameters: {"expect"=>[:new], "id"=>"home"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 3760)
+
+
+Started GET "/users/admin.png" for 127.0.0.1 at 2023-01-21 14:29:00 +0530
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=home):
+  
+app/controllers/users_controller.rb:37:in `show'
+Started GET "/users/contactus.png" for 127.0.0.1 at 2023-01-21 14:29:00 +0530
+Started GET "/users/login.png" for 127.0.0.1 at 2023-01-21 14:29:00 +0530
+Started GET "/users/signup.png" for 127.0.0.1 at 2023-01-21 14:29:00 +0530
+Processing by UsersController#show as PNG
+  Parameters: {"expect"=>[:new], "id"=>"contactus"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1188)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=contactus):
+  
+app/controllers/users_controller.rb:37:in `show'
+Processing by UsersController#show as PNG
+  Parameters: {"expect"=>[:new], "id"=>"admin"}
+Processing by UsersController#show as PNG
+  Parameters: {"expect"=>[:new], "id"=>"login"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+  [1m[36mDatum Load (0.0ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 6882)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=admin):
+  
+app/controllers/users_controller.rb:37:in `show'
+Processing by UsersController#show as PNG
+  Parameters: {"expect"=>[:new], "id"=>"signup"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 3833)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=login):
+  
+app/controllers/users_controller.rb:37:in `show'
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `show'
+Completed 404 Not Found in 103ms (ActiveRecord: 0.2ms | Allocations: 90334)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=signup):
+  
+app/controllers/users_controller.rb:37:in `show'
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:03 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:03 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1322)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 4230)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4600)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:04 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:04 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1246)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4006)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 4330)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:04 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:04 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1237)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 4028)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 4353)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1234)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 4003)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 4327)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1236)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4018)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 4343)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1240)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 4031)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 4356)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:05 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1244)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 4026)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4351)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:13 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1668)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 16833)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 20482)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:29:13 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1238)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4020)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4370)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:29:17 +0530
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "datum"=>{"firstName"=>"fgfgf", "lastName"=>"gfgffg", "email"=>"fgfgfgffffff"}, "commit"=>"Sign up "}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" ORDER BY "data"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" = ? LIMIT ?[0m  [["email", "fgfgfgffffff"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mDatum Create (0.1ms)[0m  [1m[32mINSERT INTO "data" ("firstName", "lastName", "email", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "fgfgf"], ["lastName", "gfgffg"], ["email", "fgfgfgffffff"], ["created_at", "2023-01-21 08:59:17.284080"], ["updated_at", "2023-01-21 08:59:17.284080"], ["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 20ms (ActiveRecord: 4.1ms | Allocations: 28043)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-01-21 14:29:17 +0530
+Processing by UsersController#index as TURBO_STREAM
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3515)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 46)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 6747)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 7239)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:30:07 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1682)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 16852)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 20491)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:30:11 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:30:11 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1235)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 4026)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 4376)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-21 14:30:41 +0530
+Processing by UsersController#new as HTML
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1676)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 16871)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 20510)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-01-21 14:30:44 +0530
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "datum"=>{"firstName"=>"gff", "lastName"=>"fgf", "email"=>"fgf"}, "commit"=>"Sign up "}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" ORDER BY "data"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mDatum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "data" WHERE "data"."email" = ? LIMIT ?[0m  [["email", "fgf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mDatum Create (0.1ms)[0m  [1m[32mINSERT INTO "data" ("firstName", "lastName", "email", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "gff"], ["lastName", "fgf"], ["email", "fgf"], ["created_at", "2023-01-21 09:00:44.548792"], ["updated_at", "2023-01-21 09:00:44.548792"], ["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 14ms (ActiveRecord: 4.6ms | Allocations: 10485)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-01-21 14:30:44 +0530
+Processing by UsersController#index as TURBO_STREAM
+  Parameters: {"expect"=>[:new]}
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3158)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 6319)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 6691)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:30:49 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"1"}
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1808)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4560)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 5970)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:30:53 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:30:53 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1359)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 4142)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4890)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:30:57 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:30:57 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1339)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4118)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 4866)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:31:00 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:31:00 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1331)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 4096)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4842)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:31:50 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:31:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:15 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1795)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 48)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 16979)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 21793)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:16 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:16 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1337)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 4089)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 4904)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:18 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:18 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1337)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 4089)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 4835)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:18 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:18 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1343)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 4095)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 4841)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1342)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 4125)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4874)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1339)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4091)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 4837)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1343)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4095)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4841)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:19 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1343)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 4126)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 4873)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:20 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:20 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1331)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 4083)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 4829)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:20 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:20 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1329)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4081)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 4827)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:20 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:20 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1341)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 4093)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4839)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1341)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 4124)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4872)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1349)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4101)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4848)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1339)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4091)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4837)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1335)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4118)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4865)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:21 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1333)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 4085)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4831)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:22 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:22 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1335)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4087)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4833)
+
+
+Started PATCH "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:22 +0530
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/1/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2023-01-21 14:32:22 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (0.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1342)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4125)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 4874)
+
+
